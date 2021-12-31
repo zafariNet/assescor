@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <h4>{{character?.name}}</h4>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-lg-5"><img [src]="'assets/images/films/'+imageName +'.jpg'"></div>
+            <div class="col-lg-7  text-left">
+
+                <div>Height : {{character?.height}}</div>
+                <div>Hair Color : {{character?.hair_color}}</div>
+                <div>Skin Color : {{character?.skin_color}}</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <a  style="float: right;" [routerLink]="['./' + getId(character?.url) ]">Detail</a>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="row pt-lg" *ngIf="dataLoaded">
+    <div class="col-lg-12 col-sm-12 col-md-12">
+      <div class="card ">
+        <div class="card-header">
+          <h4>{{ character?.name }}</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="assets/images/films/1.jpg"  />
+            </div>
+            <div class="col-lg-9">
+              <h5 lass="text-left">Details </h5>
+              <div><strong>Height : </strong> {{ character?.height }}</div>
+              <div><strong>Hair Color : </strong> {{ character?.hair_color }}</div>
+              <div><strong>Skin Color : </strong>{{ character?.skin_color }}</div>
+              <div><strong>Eye Color : </strong>{{ character?.eye_color }}</div>
+              <div><strong>Birth Year : </strong>{{ character?.birth_year }}</div>
+              <div><strong>Gender : </strong>{{ character?.gender }}</div>
+              <div><strong>Homeworld : </strong>{{ character?.homeworld }}</div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <legend class="col-form-label col-sm-2 pt-0">
+                    <strong>Films</strong>
+                  </legend>
+  
+                  <div class="col-md-12">
+                    
+                        <a  class="btn btn-success"  *ngFor="let film of character?.films; let i = index"
+                        [routerLink]="['../../planets/'+ getId(film)]"
+                        style="margin-left: 10px;margin-top:5px">
+                            {{'Planet '+(i+1)}} 
+                        </a>
+      
+                  </div>
+                </fieldset>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted text-right"></div>
+      </div>
+    </div>
+  </div>
+  

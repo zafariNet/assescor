@@ -1,0 +1,24 @@
+
+
+.pt-xs { padding-top: .25em; }
+.pt-sm { padding-top: .5em; }
+.pt-md { padding-top: 1em; }
+.pt-lg { padding-top: 1.5em; }
+.pt-xl { padding-top: 3em; }
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    text-decoration: none;
+}
+.form-group{
+    margin-bottom: 10px;
+}
+label{
+    margin-bottom: 5px;
+}

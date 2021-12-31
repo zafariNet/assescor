@@ -1,0 +1,5 @@
+
+<div class="row pt-lg" *ngIf="dataLoaded">
+<div class="col-sm-6  pt-lg" film-item [film]="film" [imageName]="(i+1).toString()" *ngFor="let film of filmes; let i=index"></div>
+
+</div>

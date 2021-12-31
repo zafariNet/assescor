@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block">
+        </span>
+
+        <a class="navbar-brand d-none d-lg-inline-block" [routerLink]="['./']"> ASSECOR ASSESMENT</a>
+
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#assecorNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="assecorNav">
+        <ul class="navbar-nav ms-auto flex-nowrap">
+            
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/films']">Films</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/planets']">Planets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/characters']">Characters</a>
+            </li>
+        </ul>
+    </div>
+</nav>

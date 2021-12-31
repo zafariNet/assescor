@@ -1,0 +1,5 @@
+
+<div class="row pt-lg" *ngIf="dataLoaded">
+    <div class="col-sm-6 pt-lg" planet-item [planet]="planet" [imageName]="(i+1).toString()" *ngFor="let planet of planets; let i=index"></div>
+    
+    </div>

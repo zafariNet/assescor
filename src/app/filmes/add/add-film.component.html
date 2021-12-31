@@ -1,0 +1,69 @@
+<ng-template #addFilmTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add Film</h4>
+        <a class="close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true">×</span>
+        </a>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="addForm">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="email" class="form-control" id="title" formControlName="title">
+                        <span 
+                        class="text-danger" 
+                        *ngIf="
+                        addForm.get('title')?.hasError('required') &&  addForm.controls['title']?.touched"
+                    >You must enter a title</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="director">Director</label>
+                        <input type="text" class="form-control" id="director" name="director">
+                        <span 
+                        class="text-danger" 
+                        *ngIf="
+                        addForm.get('director')?.hasError('required') &&  addForm.controls['director']?.touched"
+                    >You must enter a director</span>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="propducent">Propducent</label>
+                        <select class="form-select">
+                            <option [value]="'option1'">Option 1</option>
+                            <option [value]="'option1'">Option 2</option>
+                            <option [value]="'option1'">Option 3</option>
+                        </select>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <label for="releaseDate">Release Date</label>
+                        <input type="text" name="releaseDate" id="releaseDate" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modalRef?.hide()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+    </div>
+</ng-template>
